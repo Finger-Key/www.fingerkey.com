@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FingerKey | Secure USB Drive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+    }
+    
+    header {
+      background: #0f172a;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .left h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav.right a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav.right a:hover {
+      text-decoration: underline;
+      background-color: rgba(255 255 255 / 0.15);
+    }
+
+    nav.right a.active {
+      background-color: #3b82f6;
+      text-decoration: none;
+    }
+
+    header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    header img {
+      height: 60px;
+      vertical-align: middle;
+    }
+
+    .hero {
+      padding: 60px 40px;
+      text-align: center;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero button {
+      padding: 12px 24px;
+      background: #3b82f6;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #2563eb;
+    }
+
+   .section {
+  padding: 40px;
+  text-align: center;
+}
+
+.section h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color:#0f172a;
+}
+
+.section p {
+  font-size: 16px;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+.section-box {
+  background-color: white;
+  margin: 40px auto;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  max-width: 800px;
+  text-align: center;
+  color: #333;
+}
+
+.section-box h3 {
+  color: #1e293b; /* Darker for header */
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+.steps-list li {
+  background: #f1f5f9;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+.steps-list li strong {
+  color: #3b82f6; /* Blue highlight */
+  font-weight: 600;
+}
+
+.steps-list li:hover {
+  background-color: #e0e7ff; /* subtle hover effect */
+}
+
+.section button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.section button:hover {
+  background-color: #2563eb;
+}
+
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0f172a;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header, .hero, .section {
+        padding: 20px;
+      }
+      .hero h2 {
+        font-size: 28px;
+      }
+      .section h3 {
+        font-size: 22px;
+      }
+      nav.right a {
+        margin-left: 12px;
+        font-size: 14px;
+        padding: 4px 8px;
+      }
+    }
+
+   .buy-button {
+  display: inline-block;
+  background-color: #60a5fa; /* Light blue */
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;      /* Reduced padding */
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: 8px;        /* Add space above the button */
+}
+
+.buy-button:hover {
+  background-color: #3b82f6;
+}
+
+
+  #eye-catching-banner-title {
+  margin-bottom: 20px; /* space below the header */
+}
+
+#eye-catching-banner-title + p {
+  margin-bottom: 20px; /* space below the paragraph */
+}
+
+.steps-list {
+  margin-top: 0; /* optional, to control space above the list */
+  padding-left: 20px; /* to indent the list */
+  line-height: 1.6; /* improves readability */
+}
+
+    
+  </style>
+</head>
+<body>
+<header>
+  <div class="left">
+    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+      <img src="images/Logo.PNG" alt="FingerKey Logo" style="height: 60px;" />
+      <h1>FingerKey</h1>
+    </a>
+  </div>
+  <nav class="right">
+    <a href="index.html" class="active">Home</a>
+    <a href="product.html">Product</a>
+    <a href="how-it-works.html" class="btn">How It Works</a>
+    <a href="cybersecurity-tips.html">Cybersecurity Tips</a>
+    <a href="buy.html">Buy Now</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+
+<main>
+  <section class="hero" role="banner" aria-label="Hero banner introduction">
+    <h2>Your Finger. Your Key.</h2>
+    <p>FingerKey is a smart USB drive that protects your sensitive data using fingerprint authentication and automatic theft protection.</p>
+<button onclick="window.location.href='how-it-works.html'" aria-label="Learn more about FingerKey">Learn More</button>
+  </section>
+
+  <section class="section-box" aria-labelledby="unique-feature-title">
+    <h3 id="unique-feature-title">What Makes FingerKey Unique?</h3>
+    <p>Unlike regular USB drives, FingerKey secures your data with built-in biometric security. If someone plugs it into an unauthorized device, your files are immediately protected so no one can access them. Ideal for students, professionals, and anyone with confidential files—FingerKey secures your data with just a touch of your fingerprint.</p>
+  </section>
+
+<section class="section-box" aria-labelledby="eye-catching-banner-title">
+  <h3 id="eye-catching-banner-title">Welcome to FingerKey</h3>
+  <p>The next-generation USB drive designed for your digital security. Sleek. Smart. Secure.</p>
+  <ol class="steps-list">
+<li><strong>Fingerprint scan</strong><br>User taps sensor to unlock</li>
+<li><strong>Authentication check</strong><br>User compares fingerprint with stored data</li>
+<li><strong>File Access</strong><br>If verified, files are accessible</li>
+<li><strong>Theft Protection</strong><br>Wrong user or unfamiliar device? Access denied</li>
+<li><strong>Data Safe & Secure</strong><br>All files encrypted and protected</li>
+  </ol>
+</section>
+
+
+
+<section class="section-box" aria-labelledby="pitch-speech-title">
+  <h3 id="pitch-speech-title">Your Finger. Your Key.</h3>
+  <p>FingerKey isn't just a USB drive—it's your personal gatekeeper. Using advanced fingerprint authentication and theft protection, FingerKey ensures your data stays yours and yours alone. Trusted by students, professionals, and creators.</p>
+</section>
+
+<section class="section-box" aria-labelledby="cta-title">
+  <h3 id="cta-title">Ready to Take Action?</h3>
+  <p>Secure your data with FingerKey — because privacy should be in your hands.</p>
+<a href="buy.html" class="buy-button">Buy FingerKey Now</a>
+</section>
+
+</main>
+<footer>
+  &copy; 2025 FingerKey — Secure USB Drive
+</footer>
+</body>
+</html>
